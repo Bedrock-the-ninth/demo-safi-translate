@@ -1,0 +1,255 @@
+/* Color definition */
+:root {
+  --palatte-primary: #0d44bc;
+  --palatte-background: #00879e;
+  --palatte-secondary: #ffab5b;
+  --palatte-natural-secondary: #fff2db;
+}
+
+/* General Styling */
+html,
+body {
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 5rem;
+}
+
+hr {
+  margin: 0.5rem auto;
+  text-align: center;
+  border-top: dotted 10px var(--palatte-background);
+  opacity: 1;
+  width: 5rem;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  background-color: var(--palatte-natural-secondary);
+  pointer-events: none;
+}
+
+/* Body Content Wrapper */
+#body-content {
+  position: relative;
+  z-index: 1;
+  padding: 0rem;
+  width: 100vw;
+  /* height: 100vh; */
+  margin: 0;
+  color: #1e1e1e;
+}
+
+/* Navbar Styles */
+#nav-bar {
+  background-color: var(--palatte-background);
+  z-index: 999;
+}
+
+.navbar-brand {
+  color: var(--palatte-natural-secondary);
+}
+
+.navbar-nav .nav-link {
+  color: var(--palatte-natural-secondary);
+}
+
+html[dir="rtl"] .navbar-nav .nav-link i {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .navbar-toggler {
+  margin-left: 0;
+}
+
+#contact-us {
+  background-color: var(--palatte-primary);
+  color: var(--palatte-natural-secondary);
+}
+
+#contact-us:hover {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+/* Heading Section */
+#heading {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-height: 500px;
+  padding: 5rem 20vh 100px 20vh;
+  background-color: var(--palatte-primary);
+}
+
+#landing-carousel {
+  z-index: 2;
+  text-align: center;
+}
+
+#landing-carousel .img-fluid {
+  width: 80vw;
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+/* Heading Image and Description Styles and Animation*/
+#img-desc {
+  background-color: rgba(0, 135, 158, 0.7);
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: absolute;
+  text-align: center;
+  max-width: 80vh;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+/* Coloring */
+#img-desc h1,
+#img-desc h2 {
+  color: var(--palatte-natural-secondary);
+}
+
+#img-desc p {
+  color: var(--palatte-secondary);
+}
+
+#img-desc .animated-btn {
+  background-color: var(--palatte-background);
+  color: var(--palatte-natural-secondary);
+}
+
+#img-desc .animated-btn:hover {
+  background-color: var(--palatte-natural-secondary) !important;
+  color: var(--palatte-secondary) !important;
+}
+
+/* Animated Button Styles */
+.animated-btn {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  display: inline-block;
+  margin-top: 1rem;
+  pointer-events: none;
+}
+
+#img-desc:hover .animated-btn {
+  opacity: 1;
+  transform: scale(1.1);
+  pointer-events: auto;
+}
+
+/* Responsive Styles for Heading */
+@media (max-width: 768px) {
+  #img-desc {
+    position: static !important;
+    margin-top: 1rem;
+    display: block !important;
+    text-align: center;
+    background-color: rgba(0, 135, 158, 0.7);
+    width: 100%;
+  }
+
+  #landing-carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #landing-carousel .img-fluid {
+    width: 90vw;
+    height: auto;
+    max-height: 40vh;
+    object-fit: cover;
+  }
+}
+
+/* Curve Styles */
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(-85%, 48%);
+  background-color: var(--palatte-primary);
+}
+
+.curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(12%, 40%);
+  background-color: var(--palatte-natural-secondary);
+  z-index: 0;
+}
+
+/* A Plain Background to Conceal the Inconsistencies of the Curves and the Background */
+.background {
+  content: "";
+  display: block;
+  position: relative;
+  height: 10rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--palatte-natural-secondary);
+}
+
+/* Blog Posts */
+#blog-posts {
+  max-width: 80%;
+  background-color: var(--palatte-natural-secondary);
+  box-shadow: 0px 4px 8px 0px var(--palatte-secondary),
+    0px 6px 20px 0px var(--palatte-secondary);
+}
+
+#blog-posts h2 {
+  color: var(--palatte-secondary);
+}
+
+.card {
+  max-width: 18rem;
+  margin: 1rem 0.5rem;
+}
+
+.card h3 {
+  color: var(--palatte-primary);
+}
+
+.card a {
+  background-color: var(--palatte-primary);
+  color: var(--palatte-natural-secondary);
+}
+
+.card a:hover {
+  background-color: white;
+  color: #1e1e1e;
+  box-shadow: 0px 4px 8px 0px;
+}
