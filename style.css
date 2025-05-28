@@ -26,24 +26,12 @@ hr {
   width: 5rem;
 }
 
-/* Particle Canvas */
-#particle-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100vw;
-  background-color: var(--palatte-natural-secondary);
-  pointer-events: none;
-}
-
 /* Body Content Wrapper */
 #body-content {
   position: relative;
   z-index: 1;
   padding: 0rem;
   width: 100vw;
-  /* height: 100vh; */
   margin: 0;
   color: #1e1e1e;
 }
@@ -60,8 +48,8 @@ hr {
   box-shadow: none !important;
 }
 
-.navbar-toggler-icon {
-  color: var(--palatte-natural-secondary);
+.navbar-toggled-bg {
+  background-color: var(--palatte-primary) !important;
 }
 
 .navbar-collapse {
@@ -74,11 +62,6 @@ hr {
 
 .navbar-nav .nav-link {
   color: var(--palatte-natural-secondary);
-}
-
-html[dir="rtl"] .navbar-nav .nav-link i {
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 html[dir="rtl"] .navbar-toggler {
@@ -96,6 +79,7 @@ html[dir="rtl"] .navbar-toggler {
 }
 
 #contact-us {
+  margin: 5px 0;
   background-color: var(--palatte-primary);
   color: var(--palatte-natural-secondary);
 }
@@ -109,6 +93,8 @@ html[dir="rtl"] .navbar-toggler {
 #heading {
   position: relative;
   width: 100vw;
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,7 +117,7 @@ html[dir="rtl"] .navbar-toggler {
 
 /* Heading Image and Description Styles and Animation*/
 #img-desc {
-  background-color: rgba(0, 135, 158, 0.7);
+  background-color: rgba(47, 45, 104, 0.7);
   border-radius: 10px;
   padding: 1.5rem;
   position: absolute;
@@ -152,40 +138,19 @@ html[dir="rtl"] .navbar-toggler {
 }
 
 #img-desc .animated-btn {
-  background-color: var(--palatte-background);
-  color: var(--palatte-natural-secondary);
+  background-color: var(--palatte-natural-secondary);
+  color: var(--palatte-background);
 }
 
 #img-desc .animated-btn:hover {
-  background-color: var(--palatte-natural-secondary) !important;
+  background-color: var(--palatte-background) !important;
   color: var(--palatte-secondary) !important;
 }
 
-/* Animated Button Styles */
-.animated-btn {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  display: inline-block;
-  margin-top: 1rem;
-  pointer-events: none;
-}
-
-#img-desc:hover .animated-btn {
-  opacity: 1;
-  transform: scale(1.1);
-  pointer-events: auto;
-}
-
-/* Responsive Styles for Navbar and Heading */
 @media (max-width: 992px) {
-  /* Navbar */
-  .navbar-collapse.show {
-    background-color: var(--palatte-primary);
-  }
-
-  .navbar.scrolled .navbar-collapse.show {
-    background-color: var(--palatte-background);
+  .navbar-nav {
+    align-items: center;
+    padding: 1rem;
   }
 }
 
@@ -214,7 +179,7 @@ html[dir="rtl"] .navbar-toggler {
   }
 }
 
-/* Curve Styles */
+/* Curve Styles
 .curve {
   position: absolute;
   height: 225px;
@@ -244,7 +209,7 @@ html[dir="rtl"] .navbar-toggler {
   transform: translate(12%, 40%);
   background-color: var(--palatte-natural-secondary);
   z-index: 0;
-}
+} */
 
 /* A Plain Background to Conceal the Inconsistencies of the Curves and the Background */
 .background {
@@ -255,7 +220,6 @@ html[dir="rtl"] .navbar-toggler {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--palatte-natural-secondary);
 }
 
 /* Blog Posts */
