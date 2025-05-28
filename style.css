@@ -60,6 +60,14 @@ hr {
   box-shadow: none !important;
 }
 
+.navbar-toggler-icon {
+  color: var(--palatte-natural-secondary);
+}
+
+.navbar-collapse {
+  justify-content: space-evenly;
+}
+
 .navbar-brand {
   color: var(--palatte-natural-secondary);
 }
@@ -169,8 +177,20 @@ html[dir="rtl"] .navbar-toggler {
   pointer-events: auto;
 }
 
-/* Responsive Styles for Heading */
+/* Responsive Styles for Navbar and Heading */
+@media (max-width: 992px) {
+  /* Navbar */
+  .navbar-collapse.show {
+    background-color: var(--palatte-primary);
+  }
+
+  .navbar.scrolled .navbar-collapse.show {
+    background-color: var(--palatte-background);
+  }
+}
+
 @media (max-width: 768px) {
+  /* Heading */
   #img-desc {
     position: static !important;
     margin-top: 1rem;
