@@ -67,8 +67,8 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link px-3" href="#">
-                  <i class="fas fa-concierge-bell ms-1"></i>خدمات
+                <a class="nav-link px-3" href="#blog-posts">
+                  <i class="fas fa-newspaper ms-1"></i>مقالات
                 </a>
               </li>
               <li class="nav-item">
@@ -97,21 +97,77 @@
             class="carousel slide"
             data-bs-ride="carousel"
           >
-            <div class="carousel-item active justify-content-center">
-              <img
-                src="./images/company_img.jpg"
-                class="img-fluid"
-                alt="Wherabouts of the ORG"
-              />
-              <div id="img-desc" class="carousel-caption">
-                <div class="text-group">
-                  <h1>دفتر ترجمه رسمی967</h1>
-                  <h2>دارالترجمه صفی</h2>
-                  <p>ترجمه رسمی در تجریش و باغ فردوس تهران</p>
+            <ol class="carousel-indicators">
+              <li
+                data-bs-target="#landing-carousel"
+                data-bs-slide-to="0"
+                class="active"
+              ></li>
+              <li data-bs-target="#landing-carousel" data-bs-slide-to="1"></li>
+              <li data-bs-target="#landing-carousel" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active justify-content-center">
+                <div class="container carousel-caption">
+                  <div class="text-group">
+                    <h1>دفتر ترجمه رسمی967</h1>
+                    <h2>دارالترجمه صفی</h2>
+                    <p>ترجمه رسمی در تجریش و باغ فردوس تهران</p>
+                  </div>
+                  <a href="#landing-page" class="btn animated-btn">بزن بریم</a>
                 </div>
-                <a href="#" class="btn animated-btn">بزن بریم</a>
+              </div>
+              <div class="carousel-item justify-content-center">
+                <div class="container carousel-caption">
+                  <div class="text-group">
+                    <h1>مقالات</h1>
+                    <h2>مقالات اخیر</h2>
+                    <p>
+                      میتوانید مقالات مرتبط و مواخر که از این وبگاه منتشر
+                      شده‌اند را مشاهده کنید
+                    </p>
+                  </div>
+                  <a href="#blog-posts" class="btn animated-btn">بزن بریم</a>
+                </div>
+              </div>
+              <div class="carousel-item justify-content-center">
+                <div class="container carousel-caption">
+                  <div class="text-group">
+                    <h1>تماس با ما</h1>
+                    <h2>راه های ارتباطی ما:</h2>
+                    <p>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با استفاده از طراحان گرافیک است
+                    </p>
+                  </div>
+                  <a href="#contact-us" class="btn animated-btn">تماس با ما</a>
+                </div>
               </div>
             </div>
+            <a
+              class="carousel-control-prev"
+              href="#landing-carousel"
+              role="button"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#landing-carousel"
+              role="button"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
         </div>
         <hr />
