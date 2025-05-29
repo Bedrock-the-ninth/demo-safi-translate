@@ -1,15 +1,26 @@
 /* Color definition */
 :root {
+<<<<<<< HEAD
   --palatte-primary: #0d44bc;
   --palatte-background: #00879e;
   --palatte-secondary: #ffab5b;
   --palatte-natural-secondary: #fff2db;
+=======
+  --palatte-primary: #2f2d68;
+  --palatte-background: #dae1dd;
+  --palatte-secondary: #969e96;
+  --palatte-natural-secondary: #d89e13;
+>>>>>>> master
 }
 
 /* General Styling */
 html,
 body {
   overflow-x: hidden;
+<<<<<<< HEAD
+=======
+  background-color: var(--palatte-background);
+>>>>>>> master
 }
 
 body::after {
@@ -26,6 +37,7 @@ hr {
   width: 5rem;
 }
 
+<<<<<<< HEAD
 /* Particle Canvas */
 #particle-canvas {
   position: fixed;
@@ -37,21 +49,50 @@ hr {
   pointer-events: none;
 }
 
+=======
+>>>>>>> master
 /* Body Content Wrapper */
 #body-content {
   position: relative;
   z-index: 1;
   padding: 0rem;
   width: 100vw;
+<<<<<<< HEAD
   /* height: 100vh; */
+=======
+>>>>>>> master
   margin: 0;
   color: #1e1e1e;
 }
 
 /* Navbar Styles */
 #nav-bar {
+<<<<<<< HEAD
   background-color: var(--palatte-background);
   z-index: 999;
+=======
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  margin: 0;
+  box-shadow: none !important;
+}
+
+.navbar-nav {
+  width: 90%;
+  justify-content: space-around;
+}
+
+.navbar-toggled-bg {
+  background-color: var(--palatte-primary) !important;
+}
+
+.navbar-collapse {
+  justify-content: space-evenly;
+>>>>>>> master
 }
 
 .navbar-brand {
@@ -62,16 +103,34 @@ hr {
   color: var(--palatte-natural-secondary);
 }
 
+<<<<<<< HEAD
 html[dir="rtl"] .navbar-nav .nav-link i {
   margin-left: 0.5rem;
   margin-right: 0;
 }
 
+=======
+>>>>>>> master
 html[dir="rtl"] .navbar-toggler {
   margin-left: 0;
 }
 
+<<<<<<< HEAD
 #contact-us {
+=======
+/* Navbar Styles If Scrolled By */
+.navbar.scrolled {
+  position: fixed !important;
+  top: -101px !important;
+  right: 0px !important;
+  background-color: var(--palatte-background) !important;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  transform: translateY(100px);
+}
+
+#contact-us {
+  margin: 5px 0;
+>>>>>>> master
   background-color: var(--palatte-primary);
   color: var(--palatte-natural-secondary);
 }
@@ -85,6 +144,7 @@ html[dir="rtl"] .navbar-toggler {
 #heading {
   position: relative;
   width: 100vw;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,10 +221,99 @@ html[dir="rtl"] .navbar-toggler {
     display: block !important;
     text-align: center;
     background-color: rgba(0, 135, 158, 0.7);
+=======
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url("./images/company_img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 45, 104, 0.6);
+  z-index: 1;
+}
+
+#landing-carousel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#landing-carousel .carousel-inner,
+#landing-carousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+#landing-carousel .carousel-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Heading Image and Description Styles and Animation*/
+.carousel-item.active .carousel-caption {
+  background-color: rgba(47, 45, 104, 0.6);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  position: static;
+  z-index: 1;
+  margin-bottom: 5vh;      
+}
+
+/* Coloring */
+.carousel-caption h1,
+.carousel-caption h2 {
+  color: var(--palatte-natural-secondary);
+}
+
+.carousel-caption p {
+  color: var(--palatte-secondary);
+}
+
+.carousel-caption .animated-btn {
+  background-color: var(--palatte-natural-secondary);
+  color: var(--palatte-background);
+}
+
+.carousel-caption .animated-btn:hover {
+  background-color: var(--palatte-background) !important;
+  color: var(--palatte-secondary) !important;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  /* Navbar */
+  .navbar-nav {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  /* Heading */
+  .carousel-item.active .carousel-caption {
+    position: static;
+    margin-top: 1rem;
+    display: block !important;
+    text-align: center;
+>>>>>>> master
     width: 100%;
   }
 
   #landing-carousel .carousel-item {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,19 +368,53 @@ html[dir="rtl"] .navbar-toggler {
   width: 100%;
   margin: 0;
   padding: 0;
+=======
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  #heading::after {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+  }
+}
+
+/* Carousel Indicatiors */
+.carousel-indicators {
+  list-style: none;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+>>>>>>> master
   background-color: var(--palatte-natural-secondary);
 }
 
 /* Blog Posts */
 #blog-posts {
+<<<<<<< HEAD
   max-width: 80%;
   background-color: var(--palatte-natural-secondary);
+=======
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: var(--palatte-background);
+>>>>>>> master
   box-shadow: 0px 4px 8px 0px var(--palatte-secondary),
     0px 6px 20px 0px var(--palatte-secondary);
 }
 
 #blog-posts h2 {
+<<<<<<< HEAD
   color: var(--palatte-secondary);
+=======
+  color: var(--palatte-natural-secondary);
+>>>>>>> master
 }
 
 .card {
@@ -240,7 +423,11 @@ html[dir="rtl"] .navbar-toggler {
 }
 
 .card h3 {
+<<<<<<< HEAD
   color: var(--palatte-primary);
+=======
+  color: var(--palatte-natural-secondary);
+>>>>>>> master
 }
 
 .card a {
