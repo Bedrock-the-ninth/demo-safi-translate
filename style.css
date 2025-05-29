@@ -10,6 +10,7 @@
 html,
 body {
   overflow-x: hidden;
+  background-color: var(--palatte-background);
 }
 
 body::after {
@@ -46,6 +47,11 @@ hr {
   width: 100%;
   margin: 0;
   box-shadow: none !important;
+}
+
+.navbar-nav {
+  width: 90%;
+  justify-content: space-around;
 }
 
 .navbar-toggled-bg {
@@ -94,37 +100,62 @@ html[dir="rtl"] .navbar-toggler {
   position: relative;
   width: 100vw;
   height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  max-height: 500px;
-  padding: 5rem 20vh 100px 20vh;
-  background-color: var(--palatte-primary);
+  overflow: hidden;
 }
 
 #landing-carousel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
-  text-align: center;
+}
+
+#landing-carousel .carousel-inner,
+#landing-carousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+#landing-carousel .carousel-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 #landing-carousel .img-fluid {
-  width: 80vw;
-  max-height: 60vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  width: 100%;
   object-fit: cover;
+  border-radius: 0;
+  z-index: -1;
+}
+
+#landing-carousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150, 158, 150, 0.6);
+  z-index: 0;
 }
 
 /* Heading Image and Description Styles and Animation*/
 #img-desc {
-  background-color: rgba(47, 45, 104, 0.7);
+  background-color: rgba(47, 45, 104, 0.8); /* Make background transparent as the overlay handles shading */
   border-radius: 10px;
   padding: 1.5rem;
-  position: absolute;
+  position: absolute; /* Change to relative or keep absolute if you want fine-tuned positioning */
   text-align: center;
-  max-width: 80vh;
-  max-width: 60vw;
-  margin: 0 auto;
+  max-width: 80vw; /* Re-evaluate these max-widths based on desired text wrapping */
+  margin-bottom: 5vh; /* Adjust as needed to position the text in the lower-middle */
+  z-index: 1;
 }
 
 /* Coloring */
@@ -179,48 +210,6 @@ html[dir="rtl"] .navbar-toggler {
   }
 }
 
-/* Curve Styles
-.curve {
-  position: absolute;
-  height: 225px;
-  width: 100%;
-  bottom: 0;
-  z-index: 1;
-}
-
-.curve::before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  transform: translate(-85%, 48%);
-  background-color: var(--palatte-primary);
-}
-
-.curve::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  transform: translate(12%, 40%);
-  background-color: var(--palatte-natural-secondary);
-  z-index: 0;
-} */
-
-/* A Plain Background to Conceal the Inconsistencies of the Curves and the Background */
-.background {
-  content: "";
-  display: block;
-  position: relative;
-  height: 10rem;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 /* Blog Posts */
 #blog-posts {

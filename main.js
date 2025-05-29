@@ -2,7 +2,7 @@ const navigationBar = document.querySelector(".navbar");
 const navbarToggler = document.querySelector(".navbar-toggler");
 const mainPart = document.querySelector("#mainNavbar");
 
-const scrollThreshhold = 80;
+const scrollThreshhold = 50;
 
 let scrollHandle = () => {
   if (window.scrollY > scrollThreshhold) {
